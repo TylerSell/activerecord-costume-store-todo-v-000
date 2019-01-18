@@ -8,16 +8,28 @@
 # In this change method, create columns with the correct names and 
 # value types according to the spec
 
-class CreateCostumes < ActiveRecord::Migration[5.2]
+# class CreateCostumes < ActiveRecord::Migration[5.2]
   
+#   def change
+#     create_table :costumes do |t|
+#       t.string :name
+#       t.float :price 
+#       t.integer :size 
+#       t.string :image_url
+#       t.timestamps 
+#     end
+#   end
+  
+# end
+
+class CreateCostumes < ActiveRecord::Migration[5.0]
   def change
     create_table :costumes do |t|
       t.string :name
-      t.float :price 
-      t.integer :size 
+      t.float :price
       t.string :image_url
-      t.timestamps 
+      t.string :size
+      t.timestamps
     end
   end
-  
 end
